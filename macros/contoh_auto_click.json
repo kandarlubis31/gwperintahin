@@ -1,0 +1,36 @@
+{
+  "name": "Auto Click Popup",
+  "description": "Menunggu popup notifikasi dan klik tombol OK",
+  "version": "1.0",
+  "created": "2025-01-01",
+  "steps": [
+    {
+      "id": 1,
+      "action": "wait_for_image",
+      "target": "templates/popup_notif.png",
+      "confidence": 0.80,
+      "timeout": 60,
+      "on_found": "next",
+      "on_timeout": "exit"
+    },
+    {
+      "id": 2,
+      "action": "click_image",
+      "target": "templates/btn_ok.png",
+      "confidence": 0.85,
+      "fallback": "click_color",
+      "fallback_color": "#00A884",
+      "fallback_coord": [960, 540]
+    },
+    {
+      "id": 3,
+      "action": "wait_seconds",
+      "duration": 1.0
+    },
+    {
+      "id": 4,
+      "action": "screenshot",
+      "save_path": "logs/popup_handled.png"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Monitor Warna",
+  "description": "Monitor layar, klik jika warna merah muncul",
+  "version": "1.0",
+  "created": "2025-01-01",
+  "steps": [
+    {
+      "id": 1,
+      "action": "wait_for_color",
+      "color": "#FF0000",
+      "region": [0, 0, 1920, 1080],
+      "tolerance": 30,
+      "timeout": 120,
+      "on_found": "next",
+      "on_timeout": "exit"
+    },
+    {
+      "id": 2,
+      "action": "wait_seconds",
+      "duration": 0.5
+    },
+    {
+      "id": 3,
+      "action": "click_color",
+      "color": "#FF0000",
+      "tolerance": 30,
+      "region": [0, 0, 1920, 1080]
+    },
+    {
+      "id": 4,
+      "action": "wait_seconds",
+      "duration": 1.0
+    },
+    {
+      "id": 5,
+      "action": "screenshot",
+      "save_path": "logs/after_monitor.png"
+    }
+  ]
+}

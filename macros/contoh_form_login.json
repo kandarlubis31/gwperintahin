@@ -1,0 +1,70 @@
+{
+  "name": "Isi Form Login",
+  "description": "Auto-fill login form di browser",
+  "version": "1.0",
+  "created": "2025-01-01",
+  "steps": [
+    {
+      "id": 1,
+      "action": "wait_for_window",
+      "title": "Chrome",
+      "timeout": 30
+    },
+    {
+      "id": 2,
+      "action": "focus_window",
+      "title": "Chrome"
+    },
+    {
+      "id": 3,
+      "action": "wait_seconds",
+      "duration": 1.0
+    },
+    {
+      "id": 4,
+      "action": "wait_for_image",
+      "target": "templates/email_field.png",
+      "confidence": 0.85,
+      "timeout": 30,
+      "on_found": "next",
+      "on_timeout": "fallback_coord",
+      "fallback_x": 400,
+      "fallback_y": 300
+    },
+    {
+      "id": 5,
+      "action": "click_image",
+      "target": "templates/email_field.png",
+      "confidence": 0.80,
+      "fallback": "click_coord",
+      "fallback_coord": [400, 300]
+    },
+    {
+      "id": 6,
+      "action": "type_text",
+      "text": "user@email.com",
+      "delay_between_keys": 0.05
+    },
+    {
+      "id": 7,
+      "action": "press_key",
+      "key": "tab"
+    },
+    {
+      "id": 8,
+      "action": "wait_seconds",
+      "duration": 0.5
+    },
+    {
+      "id": 9,
+      "action": "type_text",
+      "text": "password123",
+      "delay_between_keys": 0.05
+    },
+    {
+      "id": 10,
+      "action": "press_key",
+      "key": "enter"
+    }
+  ]
+}

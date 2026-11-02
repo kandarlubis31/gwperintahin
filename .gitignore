@@ -1,0 +1,59 @@
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+*.manifest
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ── Virtual Environment ─────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+
+# ── PyInstaller Build Artifacts ─────────────────────────
+build/
+
+# ── Runtime Data (Generated) ────────────────────────────
+logs/
+exports/
+templates/
+scheduled_tasks.json
+
+# ── Test run files (auto-generated) ─────────────────────
+_test_run_*.json
+
+# ── IDE & Editors ───────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- backup envelope (auto) ---
+.env
+.env.*
+!.env.example
+node_modules/
+vendor/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.dart_tool/
+build/
+dist/
+.next/
+.expo/
+output/
+*.log
+.DS_Store
+Thumbs.db
+nul
+
